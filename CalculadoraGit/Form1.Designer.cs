@@ -29,13 +29,34 @@ namespace CalculadoraGit
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lbCalculadora = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lbCalculadora
+            // 
+            this.lbCalculadora.AutoSize = true;
+            this.lbCalculadora.Location = new System.Drawing.Point(344, 39);
+            this.lbCalculadora.Name = "lbCalculadora";
+            this.lbCalculadora.Size = new System.Drawing.Size(63, 13);
+            this.lbCalculadora.TabIndex = 0;
+            this.lbCalculadora.Text = "Calculadora";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbCalculadora);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lbCalculadora;
     }
 }
 
