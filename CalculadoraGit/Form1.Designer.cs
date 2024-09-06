@@ -38,9 +38,8 @@ namespace CalculadoraGit
             this.btnResta = new System.Windows.Forms.Button();
             this.btnMultiplicacion = new System.Windows.Forms.Button();
             this.btnDivision = new System.Windows.Forms.Button();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbCalculadora
@@ -127,26 +126,6 @@ namespace CalculadoraGit
             this.btnDivision.UseVisualStyleBackColor = true;
             this.btnDivision.Click += new System.EventHandler(this.btnDivision_Click);
             // 
-            // btnCalcular
-            // 
-            this.btnCalcular.Location = new System.Drawing.Point(206, 194);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(80, 23);
-            this.btnCalcular.TabIndex = 9;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(302, 194);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(80, 23);
-            this.btnLimpiar.TabIndex = 10;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
@@ -157,14 +136,23 @@ namespace CalculadoraGit
             this.lblResultado.TabIndex = 11;
             this.lblResultado.Text = "0.00";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(252, 198);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(80, 23);
+            this.btnLimpiar.TabIndex = 12;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 342);
-            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnDivision);
             this.Controls.Add(this.btnMultiplicacion);
             this.Controls.Add(this.btnResta);
@@ -193,9 +181,8 @@ namespace CalculadoraGit
         private System.Windows.Forms.Button btnResta;
         private System.Windows.Forms.Button btnMultiplicacion;
         private System.Windows.Forms.Button btnDivision;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 

@@ -17,11 +17,6 @@ namespace CalculadoraGit
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSuma_Click(object sender, EventArgs e)
         {
 
@@ -61,10 +56,11 @@ namespace CalculadoraGit
         {
 
         }
-
-        private void btnCalcular_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            txtbNumero1.Text = "";
+            txtbNumero2.Text = "";
+            lblResultado.Text = "0.00";
         }
     }
 }
