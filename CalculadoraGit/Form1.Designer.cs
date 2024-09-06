@@ -129,7 +129,7 @@ namespace CalculadoraGit
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(229, 195);
+            this.btnCalcular.Location = new System.Drawing.Point(206, 194);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(80, 23);
             this.btnCalcular.TabIndex = 9;
@@ -139,7 +139,7 @@ namespace CalculadoraGit
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(325, 195);
+            this.btnLimpiar.Location = new System.Drawing.Point(302, 194);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(80, 23);
             this.btnLimpiar.TabIndex = 10;
@@ -150,7 +150,7 @@ namespace CalculadoraGit
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(259, 249);
+            this.lblResultado.Location = new System.Drawing.Point(278, 247);
             this.lblResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(36, 17);
@@ -174,7 +174,7 @@ namespace CalculadoraGit
             this.Controls.Add(this.txtbNumero2);
             this.Controls.Add(this.txtbNumero1);
             this.Controls.Add(this.lbCalculadora);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

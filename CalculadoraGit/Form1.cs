@@ -29,7 +29,27 @@ namespace CalculadoraGit
 
         private void btnResta_Click(object sender, EventArgs e)
         {
-
+            String LetraNumero1 = txtbNumero1.Text, LetraNumero2 = txtbNumero2.Text;
+            double Numero1, Numero2,Resultado;
+            if (double.TryParse(LetraNumero1, out Numero1))
+            {
+                if (double.TryParse(LetraNumero2, out Numero1))
+                {
+                    Numero1 = double.Parse(LetraNumero1);
+                    Numero2 = double.Parse(LetraNumero2);
+                    Resultado = Numero1 - Numero2;
+                    lblResultado.Text = Resultado.ToString();
+                }
+                else
+                {
+                    lblResultado.Text = "Por favor digite solamente numeros";
+                }
+                    
+            }
+            else
+            {
+                lblResultado.Text = "Por favor digite solamente numeros";
+            }
         }
 
         private void btnMultiplicacion_Click(object sender, EventArgs e)
