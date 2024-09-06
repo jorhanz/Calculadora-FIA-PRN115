@@ -19,32 +19,65 @@ namespace CalculadoraGit
 
         private void btnSuma_Click(object sender, EventArgs e)
         {
-
+            //Son variables de entrada
+            String LetraNumero1 = txtbNumero1.Text, LetraNumero2 = txtbNumero2.Text;
+            double Numero1, Numero2, Resultado;
+            try
+            {
+                if (double.TryParse(LetraNumero1, out Numero1) && double.TryParse(LetraNumero2, out Numero2))
+                {
+                    if (double.TryParse(LetraNumero2, out Numero2))
+                    {
+                        Numero1 = double.Parse(LetraNumero1);
+                        Numero2 = double.Parse(LetraNumero2);
+                        Resultado = Numero1 + Numero2;
+                        lblResultado.Text = Resultado.ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show
+                  ("Ha ingresado un dato invalido, por favor escriba un valor númerico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show
+                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnResta_Click(object sender, EventArgs e)
         {
+            //Son variables de entrada
             String LetraNumero1 = txtbNumero1.Text, LetraNumero2 = txtbNumero2.Text;
-            double Numero1, Numero2,Resultado;
-            if (double.TryParse(LetraNumero1, out Numero1))
-            {
-                if (double.TryParse(LetraNumero2, out Numero1))
+            double Numero1, Numero2, Resultado;
+
+            try
+            {                           
+                if (double.TryParse(LetraNumero1, out Numero1) && double.TryParse(LetraNumero2, out Numero2))
                 {
-                    Numero1 = double.Parse(LetraNumero1);
-                    Numero2 = double.Parse(LetraNumero2);
-                    Resultado = Numero1 - Numero2;
-                    lblResultado.Text = Resultado.ToString();
+                    if (double.TryParse(LetraNumero2, out Numero2))
+                    {
+                        Numero1 = double.Parse(LetraNumero1);
+                        Numero2 = double.Parse(LetraNumero2);
+                        Resultado = Numero1 - Numero2;
+                        lblResultado.Text = Resultado.ToString();
+                    }
                 }
                 else
                 {
-                    lblResultado.Text = "Por favor digite solamente numeros";
+                    MessageBox.Show
+                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                    
+
             }
-            else
+            catch (Exception)
             {
-                lblResultado.Text = "Por favor digite solamente numeros";
+                MessageBox.Show
+                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void btnMultiplicacion_Click(object sender, EventArgs e)
@@ -61,6 +94,11 @@ namespace CalculadoraGit
             txtbNumero1.Text = "";
             txtbNumero2.Text = "";
             lblResultado.Text = "0.00";
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
