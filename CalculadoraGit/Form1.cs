@@ -16,5 +16,35 @@ namespace CalculadoraGit
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnResta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMultiplicacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDivision_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
