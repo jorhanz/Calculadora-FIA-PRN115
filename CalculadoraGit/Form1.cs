@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CalculadoraGit
@@ -17,88 +10,76 @@ namespace CalculadoraGit
             InitializeComponent();
         }
 
-        private void btnSuma_Click(object sender, EventArgs e)
+        // Método para validar las entradas
+        private bool ValidarEntrada(out double Numero1, out double Numero2)
         {
-            //Son variables de entrada
-            String LetraNumero1 = txtbNumero1.Text, LetraNumero2 = txtbNumero2.Text;
-            double Numero1, Numero2, Resultado;
-            try
+            // Asignar valores predeterminados a Numero1 y Numero2
+            Numero1 = 0;
+            Numero2 = 0;
+
+            // Intentar convertir las entradas a números
+            if (double.TryParse(txtbNumero1.Text, out Numero1) && double.TryParse(txtbNumero2.Text, out Numero2))
             {
-                if (double.TryParse(LetraNumero1, out Numero1) && double.TryParse(LetraNumero2, out Numero2))
+                return true;
+            }
+
+            // Mostrar un mensaje de error si la conversión falla
+            MessageBox.Show("Ha ingresado un dato inválido, por favor ingrese valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+
+        // Método para realizar las operaciones aritméticas
+        private void RealizarOperacion(string operacion)
+        {
+            if (ValidarEntrada(out double Numero1, out double Numero2))
+            {
+                double Resultado = 0;
+                switch (operacion)
                 {
-                    if (double.TryParse(LetraNumero2, out Numero2))
-                    {
-                        Numero1 = double.Parse(LetraNumero1);
-                        Numero2 = double.Parse(LetraNumero2);
+                    case "+":
                         Resultado = Numero1 + Numero2;
-                        lblResultado.Text = Resultado.ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show
-                  ("Ha ingresado un dato invalido, por favor escriba un valor númerico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show
-                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnResta_Click(object sender, EventArgs e)
-        {
-            //Son variables de entrada
-            String LetraNumero1 = txtbNumero1.Text, LetraNumero2 = txtbNumero2.Text;
-            double Numero1, Numero2, Resultado;
-
-            try
-            {                           
-                if (double.TryParse(LetraNumero1, out Numero1) && double.TryParse(LetraNumero2, out Numero2))
-                {
-                    if (double.TryParse(LetraNumero2, out Numero2))
-                    {
-                        Numero1 = double.Parse(LetraNumero1);
-                        Numero2 = double.Parse(LetraNumero2);
+                        break;
+                    case "-":
                         Resultado = Numero1 - Numero2;
-                        lblResultado.Text = Resultado.ToString();
-                    }
+                        break;
+                    case "*":
+                        Resultado = Numero1 * Numero2;
+                        break;
+                    case "/":
+                        if (Numero2 != 0)
+                        {
+                            Resultado = Numero1 / Numero2;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error: División por cero no permitida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        break;
                 }
-                else
-                {
-                    MessageBox.Show
-                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                // Mostrar el resultado con 2 decimales
+                lblResultado.Text = Resultado.ToString("F2");
             }
-            catch (Exception)
-            {
-                MessageBox.Show
-                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
         }
 
-        private void btnMultiplicacion_Click(object sender, EventArgs e)
-        {
+        // Eventos para los botones de las operaciones
+        private void btnSuma_Click(object sender, EventArgs e) => RealizarOperacion("+");
+        private void btnResta_Click(object sender, EventArgs e) => RealizarOperacion("-");
+        private void btnMultiplicacion_Click(object sender, EventArgs e) => RealizarOperacion("*");
+        private void btnDivision_Click(object sender, EventArgs e) => RealizarOperacion("/");
 
-        }
-
-        private void btnDivision_Click(object sender, EventArgs e)
-        {
-
-        }
+        // Botón para limpiar las entradas y el resultado
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtbNumero1.Text = "";
             txtbNumero2.Text = "";
-            lblResultado.Text = "0.00";
+            lblResultado.Text = "0.00"; // Reinicia el resultado a cero
         }
 
+        // Método para el botón de salir (cerrar la aplicación)
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close(); // Cierra la aplicación
         }
     }
 }
