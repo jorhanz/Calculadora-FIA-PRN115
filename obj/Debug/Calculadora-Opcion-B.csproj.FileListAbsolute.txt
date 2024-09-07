@@ -1,0 +1,10 @@
+C:\Users\feder\source\repos\Calculadora-Opcion-B\bin\Debug\Calculadora-Opcion-B.exe.config
+C:\Users\feder\source\repos\Calculadora-Opcion-B\bin\Debug\Calculadora-Opcion-B.exe
+C:\Users\feder\source\repos\Calculadora-Opcion-B\bin\Debug\Calculadora-Opcion-B.pdb
+C:\Users\feder\source\repos\Calculadora-Opcion-B\obj\Debug\Calculadora-Opcion-B.csproj.AssemblyReference.cache
+C:\Users\feder\source\repos\Calculadora-Opcion-B\obj\Debug\Calculadora_Opcion_B.Form1.resources
+C:\Users\feder\source\repos\Calculadora-Opcion-B\obj\Debug\Calculadora_Opcion_B.Properties.Resources.resources
+C:\Users\feder\source\repos\Calculadora-Opcion-B\obj\Debug\Calculadora-Opcion-B.csproj.GenerateResource.cache
+C:\Users\feder\source\repos\Calculadora-Opcion-B\obj\Debug\Calculadora-Opcion-B.csproj.CoreCompileInputs.cache
+C:\Users\feder\source\repos\Calculadora-Opcion-B\obj\Debug\Calculadora-Opcion-B.exe
+C:\Users\feder\source\repos\Calculadora-Opcion-B\obj\Debug\Calculadora-Opcion-B.pdb
