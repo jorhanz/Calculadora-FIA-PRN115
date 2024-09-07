@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace CalculadoraGit
@@ -17,8 +18,13 @@ namespace CalculadoraGit
             Numero1 = 0;
             Numero2 = 0;
 
+            // Reemplazar comas por puntos para la conversión
+            string entradaNumero1 = txtbNumero1.Text.Replace(',', '.');
+            string entradaNumero2 = txtbNumero2.Text.Replace(',', '.');
+
             // Intentar convertir las entradas a números
-            if (double.TryParse(txtbNumero1.Text, out Numero1) && double.TryParse(txtbNumero2.Text, out Numero2))
+            if (double.TryParse(entradaNumero1, NumberStyles.Any, CultureInfo.InvariantCulture, out Numero1) &&
+                double.TryParse(entradaNumero2, NumberStyles.Any, CultureInfo.InvariantCulture, out Numero2))
             {
                 return true;
             }
@@ -56,6 +62,9 @@ namespace CalculadoraGit
                             return;
                         }
                         break;
+                    default:
+                        MessageBox.Show("Operación no válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                 }
                 // Mostrar el resultado con 2 decimales
                 lblResultado.Text = Resultado.ToString("F2");

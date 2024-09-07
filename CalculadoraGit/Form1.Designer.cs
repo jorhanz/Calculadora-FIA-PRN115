@@ -160,7 +160,7 @@ namespace CalculadoraGit
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(12, 197);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(129, 38);
+            this.btnLimpiar.Size = new System.Drawing.Size(129, 42);
             this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -172,7 +172,7 @@ namespace CalculadoraGit
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(147, 197);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(127, 38);
+            this.btnExit.Size = new System.Drawing.Size(127, 42);
             this.btnExit.TabIndex = 14;
             this.btnExit.Text = "Salir";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@ namespace CalculadoraGit
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(467, 309);
+            this.ClientSize = new System.Drawing.Size(452, 309);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLimpiar);
