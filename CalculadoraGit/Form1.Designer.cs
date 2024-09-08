@@ -48,7 +48,7 @@ namespace CalculadoraGit
             // 
             this.lbCalculadora.AutoSize = true;
             this.lbCalculadora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCalculadora.Location = new System.Drawing.Point(127, 26);
+            this.lbCalculadora.Location = new System.Drawing.Point(74, 18);
             this.lbCalculadora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCalculadora.Name = "lbCalculadora";
             this.lbCalculadora.Size = new System.Drawing.Size(199, 29);
@@ -59,7 +59,7 @@ namespace CalculadoraGit
             // 
             this.txtbNumero1.BackColor = System.Drawing.Color.Aqua;
             this.txtbNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNumero1.Location = new System.Drawing.Point(18, 117);
+            this.txtbNumero1.Location = new System.Drawing.Point(18, 79);
             this.txtbNumero1.Name = "txtbNumero1";
             this.txtbNumero1.Size = new System.Drawing.Size(129, 35);
             this.txtbNumero1.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace CalculadoraGit
             // 
             this.txtbNumero2.BackColor = System.Drawing.Color.Aqua;
             this.txtbNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNumero2.Location = new System.Drawing.Point(295, 117);
+            this.txtbNumero2.Location = new System.Drawing.Point(192, 79);
             this.txtbNumero2.Name = "txtbNumero2";
             this.txtbNumero2.Size = new System.Drawing.Size(127, 35);
             this.txtbNumero2.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace CalculadoraGit
             // 
             this.lblNumero1.AutoSize = true;
             this.lblNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero1.Location = new System.Drawing.Point(13, 85);
+            this.lblNumero1.Location = new System.Drawing.Point(17, 47);
             this.lblNumero1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero1.Name = "lblNumero1";
             this.lblNumero1.Size = new System.Drawing.Size(134, 29);
@@ -88,7 +88,7 @@ namespace CalculadoraGit
             // 
             this.lblNumero2.AutoSize = true;
             this.lblNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero2.Location = new System.Drawing.Point(290, 85);
+            this.lblNumero2.Location = new System.Drawing.Point(187, 47);
             this.lblNumero2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero2.Name = "lblNumero2";
             this.lblNumero2.Size = new System.Drawing.Size(134, 29);
@@ -99,7 +99,7 @@ namespace CalculadoraGit
             // 
             this.btnSuma.BackColor = System.Drawing.Color.Aqua;
             this.btnSuma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuma.Location = new System.Drawing.Point(168, 74);
+            this.btnSuma.Location = new System.Drawing.Point(65, 130);
             this.btnSuma.Name = "btnSuma";
             this.btnSuma.Size = new System.Drawing.Size(50, 50);
             this.btnSuma.TabIndex = 5;
@@ -111,7 +111,7 @@ namespace CalculadoraGit
             // 
             this.btnResta.BackColor = System.Drawing.Color.Aqua;
             this.btnResta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResta.Location = new System.Drawing.Point(224, 74);
+            this.btnResta.Location = new System.Drawing.Point(121, 130);
             this.btnResta.Name = "btnResta";
             this.btnResta.Size = new System.Drawing.Size(50, 50);
             this.btnResta.TabIndex = 6;
@@ -123,7 +123,7 @@ namespace CalculadoraGit
             // 
             this.btnMultiplicacion.BackColor = System.Drawing.Color.Aqua;
             this.btnMultiplicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiplicacion.Location = new System.Drawing.Point(168, 129);
+            this.btnMultiplicacion.Location = new System.Drawing.Point(174, 130);
             this.btnMultiplicacion.Name = "btnMultiplicacion";
             this.btnMultiplicacion.Size = new System.Drawing.Size(50, 50);
             this.btnMultiplicacion.TabIndex = 7;
@@ -135,7 +135,7 @@ namespace CalculadoraGit
             // 
             this.btnDivision.BackColor = System.Drawing.Color.Aqua;
             this.btnDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivision.Location = new System.Drawing.Point(224, 129);
+            this.btnDivision.Location = new System.Drawing.Point(230, 130);
             this.btnDivision.Name = "btnDivision";
             this.btnDivision.Size = new System.Drawing.Size(50, 50);
             this.btnDivision.TabIndex = 8;
@@ -147,7 +147,7 @@ namespace CalculadoraGit
             // 
             this.lblResultado.AutoSize = true;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(163, 259);
+            this.lblResultado.Location = new System.Drawing.Point(211, 260);
             this.lblResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(62, 29);
@@ -158,7 +158,7 @@ namespace CalculadoraGit
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.Aqua;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(12, 197);
+            this.btnLimpiar.Location = new System.Drawing.Point(42, 200);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(129, 42);
             this.btnLimpiar.TabIndex = 12;
@@ -170,7 +170,7 @@ namespace CalculadoraGit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Aqua;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(147, 197);
+            this.btnExit.Location = new System.Drawing.Point(177, 200);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(127, 42);
             this.btnExit.TabIndex = 14;
@@ -182,7 +182,7 @@ namespace CalculadoraGit
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 259);
+            this.label1.Location = new System.Drawing.Point(66, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 29);
             this.label1.TabIndex = 15;
@@ -193,7 +193,7 @@ namespace CalculadoraGit
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(452, 309);
+            this.ClientSize = new System.Drawing.Size(359, 302);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLimpiar);
