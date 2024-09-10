@@ -31,10 +31,10 @@ namespace Calculadora2._0._1
                 case "-":
                     resultado = numero1 - numero2;
                     break;
-                case "x":
+                case "*":
                     resultado = numero1 * numero2;
                     break;
-                case "÷":
+                case "/":
                     if (numero2 != 0)
                     {
                         resultado = numero1 / numero2;

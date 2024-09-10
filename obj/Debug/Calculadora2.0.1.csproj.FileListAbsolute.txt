@@ -8,3 +8,13 @@ C:\Users\feder\source\repos\Calculadora2.0.1\obj\Debug\Calculadora2.0.1.csproj.G
 C:\Users\feder\source\repos\Calculadora2.0.1\obj\Debug\Calculadora2.0.1.csproj.CoreCompileInputs.cache
 C:\Users\feder\source\repos\Calculadora2.0.1\obj\Debug\Calculadora2.0.1.exe
 C:\Users\feder\source\repos\Calculadora2.0.1\obj\Debug\Calculadora2.0.1.pdb
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.exe.config
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.exe
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.pdb
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.AssemblyReference.cache
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2._0._1.Form1.resources
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2._0._1.Properties.Resources.resources
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.GenerateResource.cache
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.CoreCompileInputs.cache
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.exe
+C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.pdb
