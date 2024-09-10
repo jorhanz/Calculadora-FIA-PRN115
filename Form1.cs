@@ -1,134 +1,102 @@
 ﻿using System;
-using System.Globalization;
+using System.Drawing; // Asegúrate de que esta directiva esté presente
+using System.Globalization; // Para manejo de cultura
 using System.Windows.Forms;
 
-namespace Calculadora2._0._1
+namespace ComboBoxColorExample
 {
     public partial class Form1 : Form
     {
-        // Constructor del formulario
         public Form1()
         {
             InitializeComponent();
-<<<<<<< HEAD
-            KeyPreview = true; // Habilita la captura de teclas para el formulario
-            this.KeyPress += new KeyPressEventHandler(Form1_KeyPress); // Asocia el manejador de eventos para la tecla presionada
-=======
-            cbOperacion.SelectedIndex = 0;
->>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
+            InitializeComboBox();
         }
 
-        // Manejador del clic del botón "="
-        private void btnIgual_Click(object sender, EventArgs e)
+        private void InitializeComboBox()
         {
-            // Validar que ambos campos de entrada no estén vacíos
-            if (string.IsNullOrEmpty(txtNumero1.Text) || string.IsNullOrEmpty(txtNumero2.Text))
-            {
-                lblResultado.Text = "Por favor, ingresa ambos números.";
+            cbOperacion.DrawMode = DrawMode.OwnerDrawFixed;
+            cbOperacion.DrawItem += new DrawItemEventHandler(cbOperacion_DrawItem);
+        }
+
+        private void cbOperacion_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0)
                 return;
-            }
 
-            double numero1, numero2, resultado = 0;
+            ComboBox comboBox = (ComboBox)sender;
+            string itemText = comboBox.Items[e.Index].ToString();
 
-            // Intentar convertir las entradas a números de acuerdo a la configuración regional del sistema
-            try
+            e.DrawBackground();
+            using (var brush = new SolidBrush(Color.LightBlue)) // Usa System.Drawing.Color
             {
-                numero1 = double.Parse(txtNumero1.Text, CultureInfo.CurrentCulture);
-                numero2 = double.Parse(txtNumero2.Text, CultureInfo.CurrentCulture);
+                e.Graphics.FillRectangle(brush, e.Bounds);
             }
-            catch (FormatException)
+            using (var brush = new SolidBrush(Color.DarkBlue)) // Usa System.Drawing.Color
             {
-                lblResultado.Text = "Por favor, ingresa números válidos.";
-                return;
+                e.Graphics.DrawString(itemText, e.Font, brush, e.Bounds);
             }
 
-            // Validar que se haya seleccionado una operación
-            if (cbOperacion.SelectedItem == null)
-            {
-                lblResultado.Text = "Selecciona una operación.";
-                return;
-            }
-
-            // Realizar el cálculo basado en la operación seleccionada
-            switch (cbOperacion.SelectedItem.ToString())
-            {
-                case "+":
-                    resultado = numero1 + numero2;
-                    break;
-                case "-":
-                    resultado = numero1 - numero2;
-                    break;
-                case "*":
-                    resultado = numero1 * numero2;
-                    break;
-                case "/":
-                    if (numero2 != 0)
-                    {
-                        resultado = numero1 / numero2;
-                    }
-                    else
-                    {
-                        lblResultado.Text = "No se puede dividir por 0.";
-                        return;
-                    }
-                    break;
-                default:
-                    lblResultado.Text = "Operación no válida.";
-                    return;
-            }
-
-            // Mostrar el resultado en el label con el formato adecuado
-            lblResultado.Text = "Resultado: " + resultado.ToString("G", CultureInfo.CurrentCulture);
-
-            // Guardar la operación en el historial
-            GuardarHistorial(numero1, numero2, cbOperacion.SelectedItem.ToString(), resultado);
-
-            // Preparar los campos para la siguiente operación
-            PrepararSiguienteOperacion(resultado);
+            e.DrawFocusRectangle();
         }
 
-        // Método para limpiar los campos de entrada y el resultado
-        private void LimpiarCampos()
-        {
-            txtNumero1.Clear(); // Limpia el campo de texto del primer número
-            txtNumero2.Clear(); // Limpia el campo de texto del segundo número
-            lblResultado.Text = string.Empty; // Limpia el label del resultado
-            cbOperacion.SelectedIndex = -1; // Deselecciona la operación
-        }
-
-        // Método para preparar los campos para la siguiente operación
-        private void PrepararSiguienteOperacion(double resultado)
-        {
-            txtNumero1.Text = resultado.ToString(CultureInfo.CurrentCulture); // Usa el resultado como primer número para la siguiente operación
-            txtNumero2.Clear(); // Limpia el campo del segundo número
-            cbOperacion.SelectedIndex = -1; // Deselecciona la operación
-        }
-
-        // Método para guardar la operación en el historial
-        private void GuardarHistorial(double numero1, double numero2, string operacion, double resultado)
-        {
-            // Agrega la operación al ListBox del historial
-            listBoxHistorial.Items.Add($"{numero1.ToString(CultureInfo.CurrentCulture)} {operacion} {numero2.ToString(CultureInfo.CurrentCulture)} = {resultado.ToString(CultureInfo.CurrentCulture)}");
-        }
-
-        // Manejador del clic del botón "Limpiar"
         private void btnCleaner_Click(object sender, EventArgs e)
         {
-            LimpiarCampos(); // Llama al método para limpiar los campos
+            txtNumero1.Text = "";
+            txtNumero2.Text = "";
+            lblResultado.Text = "Que el resultado es:"; // Texto de la etiqueta
         }
 
-        // Manejador del clic del botón "Salir"
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // Cierra la aplicación
+            this.Close();
         }
 
-        // Manejador del evento de presionar teclas
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnIgual_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            double num1, num2;
+            double result = 0;
+
+            // Ajuste para manejar el separador decimal correcto
+            var culture = CultureInfo.CurrentCulture;
+            var numberFormat = culture.NumberFormat;
+            string decimalSeparator = numberFormat.CurrencyDecimalSeparator;
+
+            // Reemplazar el separador decimal en el texto
+            string textNum1 = txtNumero1.Text.Replace(',', decimalSeparator[0]).Replace('.', decimalSeparator[0]);
+            string textNum2 = txtNumero2.Text.Replace(',', decimalSeparator[0]).Replace('.', decimalSeparator[0]);
+
+            if (double.TryParse(textNum1, NumberStyles.Float, culture, out num1) && double.TryParse(textNum2, NumberStyles.Float, culture, out num2))
             {
-                btnIgual.PerformClick(); // Ejecuta la operación cuando se presiona Enter
+                switch (cbOperacion.SelectedItem.ToString())
+                {
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        if (num2 != 0)
+                        {
+                            result = num1 / num2;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se puede dividir por cero.");
+                            return;
+                        }
+                        break;
+                }
+
+                lblResultado.Text = $"Que el resultado es: {result.ToString(culture)}"; // Texto de la etiqueta con resultado
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese números válidos.");
             }
         }
     }

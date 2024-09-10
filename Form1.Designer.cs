@@ -1,17 +1,9 @@
-﻿
-namespace Calculadora2._0._1
+﻿namespace ComboBoxColorExample
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,12 +13,6 @@ namespace Calculadora2._0._1
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.txtNumero1 = new System.Windows.Forms.TextBox();
@@ -40,47 +26,40 @@ namespace Calculadora2._0._1
             // 
             // txtNumero1
             // 
-            this.txtNumero1.BackColor = System.Drawing.Color.Aqua;
+            this.txtNumero1.BackColor = System.Drawing.Color.MintCream;
             this.txtNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero1.Location = new System.Drawing.Point(54, 12);
             this.txtNumero1.Name = "txtNumero1";
-<<<<<<< HEAD
             this.txtNumero1.Size = new System.Drawing.Size(123, 35);
-=======
-            this.txtNumero1.Size = new System.Drawing.Size(100, 22);
->>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
             this.txtNumero1.TabIndex = 0;
+            this.txtNumero1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNumero2
             // 
-            this.txtNumero2.BackColor = System.Drawing.Color.Aqua;
+            this.txtNumero2.BackColor = System.Drawing.Color.MintCream;
             this.txtNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero2.Location = new System.Drawing.Point(54, 53);
             this.txtNumero2.Name = "txtNumero2";
-<<<<<<< HEAD
             this.txtNumero2.Size = new System.Drawing.Size(123, 35);
-=======
-            this.txtNumero2.Size = new System.Drawing.Size(100, 22);
->>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
             this.txtNumero2.TabIndex = 1;
+            this.txtNumero2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblResultado.BackColor = System.Drawing.Color.Teal;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(33, 96);
+            this.lblResultado.ForeColor = System.Drawing.Color.White;
+            this.lblResultado.Location = new System.Drawing.Point(19, 101);
             this.lblResultado.Name = "lblResultado";
-<<<<<<< HEAD
-            this.lblResultado.Size = new System.Drawing.Size(0, 29);
-=======
-            this.lblResultado.Size = new System.Drawing.Size(0, 17);
->>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
-            this.lblResultado.TabIndex = 4;
+            this.lblResultado.Size = new System.Drawing.Size(249, 29);
+            this.lblResultado.TabIndex = 7;
+            this.lblResultado.Text = "Que el resultado es:";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbOperacion
             // 
-            this.cbOperacion.BackColor = System.Drawing.Color.Aqua;
+            this.cbOperacion.BackColor = System.Drawing.Color.MintCream;
             this.cbOperacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbOperacion.FormattingEnabled = true;
@@ -91,16 +70,12 @@ namespace Calculadora2._0._1
             "/"});
             this.cbOperacion.Location = new System.Drawing.Point(184, 10);
             this.cbOperacion.Name = "cbOperacion";
-<<<<<<< HEAD
             this.cbOperacion.Size = new System.Drawing.Size(46, 37);
-=======
-            this.cbOperacion.Size = new System.Drawing.Size(50, 24);
->>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
             this.cbOperacion.TabIndex = 2;
             // 
             // btnIgual
             // 
-            this.btnIgual.BackColor = System.Drawing.Color.Aqua;
+            this.btnIgual.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIgual.Location = new System.Drawing.Point(184, 53);
             this.btnIgual.Name = "btnIgual";
@@ -112,7 +87,7 @@ namespace Calculadora2._0._1
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Aqua;
+            this.btnExit.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(142, 133);
             this.btnExit.Name = "btnExit";
@@ -124,7 +99,7 @@ namespace Calculadora2._0._1
             // 
             // btnCleaner
             // 
-            this.btnCleaner.BackColor = System.Drawing.Color.Aqua;
+            this.btnCleaner.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnCleaner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCleaner.Location = new System.Drawing.Point(12, 133);
             this.btnCleaner.Name = "btnCleaner";
@@ -136,7 +111,7 @@ namespace Calculadora2._0._1
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.Color.Teal;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(280, 200);
             this.Controls.Add(this.btnCleaner);
             this.Controls.Add(this.btnExit);
@@ -162,8 +137,4 @@ namespace Calculadora2._0._1
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnCleaner;
     }
-
-        #endregion
 }
-
-
