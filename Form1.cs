@@ -10,8 +10,12 @@ namespace Calculadora2._0._1
         public Form1()
         {
             InitializeComponent();
+<<<<<<< HEAD
             KeyPreview = true; // Habilita la captura de teclas para el formulario
             this.KeyPress += new KeyPressEventHandler(Form1_KeyPress); // Asocia el manejador de eventos para la tecla presionada
+=======
+            cbOperacion.SelectedIndex = 0;
+>>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
         }
 
         // Manejador del clic del botón "="

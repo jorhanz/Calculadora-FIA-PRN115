@@ -44,7 +44,11 @@ namespace Calculadora2._0._1
             this.txtNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero1.Location = new System.Drawing.Point(54, 12);
             this.txtNumero1.Name = "txtNumero1";
+<<<<<<< HEAD
             this.txtNumero1.Size = new System.Drawing.Size(123, 35);
+=======
+            this.txtNumero1.Size = new System.Drawing.Size(100, 22);
+>>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
             this.txtNumero1.TabIndex = 0;
             // 
             // txtNumero2
@@ -53,7 +57,11 @@ namespace Calculadora2._0._1
             this.txtNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero2.Location = new System.Drawing.Point(54, 53);
             this.txtNumero2.Name = "txtNumero2";
+<<<<<<< HEAD
             this.txtNumero2.Size = new System.Drawing.Size(123, 35);
+=======
+            this.txtNumero2.Size = new System.Drawing.Size(100, 22);
+>>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
             this.txtNumero2.TabIndex = 1;
             // 
             // lblResultado
@@ -63,7 +71,11 @@ namespace Calculadora2._0._1
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.Location = new System.Drawing.Point(33, 96);
             this.lblResultado.Name = "lblResultado";
+<<<<<<< HEAD
             this.lblResultado.Size = new System.Drawing.Size(0, 29);
+=======
+            this.lblResultado.Size = new System.Drawing.Size(0, 17);
+>>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
             this.lblResultado.TabIndex = 4;
             // 
             // cbOperacion
@@ -79,7 +91,11 @@ namespace Calculadora2._0._1
             "/"});
             this.cbOperacion.Location = new System.Drawing.Point(184, 10);
             this.cbOperacion.Name = "cbOperacion";
+<<<<<<< HEAD
             this.cbOperacion.Size = new System.Drawing.Size(46, 37);
+=======
+            this.cbOperacion.Size = new System.Drawing.Size(50, 24);
+>>>>>>> f3c88550e87f653efa30534db2f3cdca941c27ff
             this.cbOperacion.TabIndex = 2;
             // 
             // btnIgual
