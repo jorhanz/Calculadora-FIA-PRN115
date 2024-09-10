@@ -42,14 +42,14 @@ namespace Calculadora2._0._1
             // 
             this.txtNumero1.Location = new System.Drawing.Point(30, 30);
             this.txtNumero1.Name = "txtNumero1";
-            this.txtNumero1.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero1.Size = new System.Drawing.Size(100, 22);
             this.txtNumero1.TabIndex = 0;
             // 
             // txtNumero2
             // 
             this.txtNumero2.Location = new System.Drawing.Point(30, 67);
             this.txtNumero2.Name = "txtNumero2";
-            this.txtNumero2.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero2.Size = new System.Drawing.Size(100, 22);
             this.txtNumero2.TabIndex = 1;
             // 
             // lblResultado
@@ -57,7 +57,7 @@ namespace Calculadora2._0._1
             this.lblResultado.AutoSize = true;
             this.lblResultado.Location = new System.Drawing.Point(192, 74);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(0, 13);
+            this.lblResultado.Size = new System.Drawing.Size(0, 17);
             this.lblResultado.TabIndex = 4;
             // 
             // cbOperacion
@@ -71,7 +71,7 @@ namespace Calculadora2._0._1
             "/"});
             this.cbOperacion.Location = new System.Drawing.Point(136, 30);
             this.cbOperacion.Name = "cbOperacion";
-            this.cbOperacion.Size = new System.Drawing.Size(50, 21);
+            this.cbOperacion.Size = new System.Drawing.Size(50, 24);
             this.cbOperacion.TabIndex = 2;
             // 
             // btnIgual

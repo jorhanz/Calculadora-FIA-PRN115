@@ -15,6 +15,7 @@ namespace Calculadora2._0._1
         public Form1()
         {
             InitializeComponent();
+            cbOperacion.SelectedIndex = 0;
         }
 
         private void btnIgual_Click(object sender, EventArgs e)
