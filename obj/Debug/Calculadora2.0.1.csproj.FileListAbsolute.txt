@@ -18,3 +18,13 @@ C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.cspr
 C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.CoreCompileInputs.cache
 C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.exe
 C:\Users\Utip\workstation\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.exe.config
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.exe
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\obj\Debug\Calculadora2._0._1.Form1.resources
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\obj\Debug\Calculadora2._0._1.Properties.Resources.resources
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.GenerateResource.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.exe
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.pdb
