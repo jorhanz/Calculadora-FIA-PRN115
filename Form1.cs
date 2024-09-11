@@ -44,7 +44,7 @@ namespace ComboBoxColorExample
         {
             txtNumero1.Text = "";
             txtNumero2.Text = "";
-            lblResultado.Text = "Que el resultado es:"; // Texto de la etiqueta
+            lblResultado.Text = "El resultado es:"; // Texto de la etiqueta
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace ComboBoxColorExample
                         break;
                 }
 
-                lblResultado.Text = $"Que el resultado es: {result.ToString(culture)}"; // Texto de la etiqueta con resultado
+                lblResultado.Text = $"El resultado es: {result.ToString(culture)}"; // Texto de la etiqueta con resultado
             }
             else
             {

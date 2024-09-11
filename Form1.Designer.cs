@@ -52,9 +52,9 @@
             this.lblResultado.ForeColor = System.Drawing.Color.White;
             this.lblResultado.Location = new System.Drawing.Point(19, 101);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(249, 29);
+            this.lblResultado.Size = new System.Drawing.Size(195, 29);
             this.lblResultado.TabIndex = 7;
-            this.lblResultado.Text = "Que el resultado es:";
+            this.lblResultado.Text = "El resultado es:";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbOperacion
