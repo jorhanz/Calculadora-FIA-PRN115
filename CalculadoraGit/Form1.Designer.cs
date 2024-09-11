@@ -26,39 +26,40 @@
             // 
             // txtNumero1
             // 
-            this.txtNumero1.BackColor = System.Drawing.Color.MintCream; // Verde menta claro
+            this.txtNumero1.BackColor = System.Drawing.Color.MintCream;
             this.txtNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero1.Location = new System.Drawing.Point(54, 12);
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(123, 35);
             this.txtNumero1.TabIndex = 0;
-            this.txtNumero1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center; // Centrar texto
+            this.txtNumero1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNumero2
             // 
-            this.txtNumero2.BackColor = System.Drawing.Color.MintCream; // Verde menta claro
+            this.txtNumero2.BackColor = System.Drawing.Color.MintCream;
             this.txtNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero2.Location = new System.Drawing.Point(54, 53);
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(123, 35);
             this.txtNumero2.TabIndex = 1;
-            this.txtNumero2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center; // Centrar texto
+            this.txtNumero2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.BackColor = System.Drawing.Color.Teal; // Verde menta oscuro
+            this.lblResultado.BackColor = System.Drawing.Color.Teal;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.ForeColor = System.Drawing.Color.White; // Texto en blanco para contraste
-            this.lblResultado.Location = new System.Drawing.Point(45, 96);
+            this.lblResultado.ForeColor = System.Drawing.Color.White;
+            this.lblResultado.Location = new System.Drawing.Point(19, 101);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(195, 29);
-            this.lblResultado.Text = "Resultado:"; // Texto de la etiqueta
-            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter; // Centrar texto
+            this.lblResultado.TabIndex = 7;
+            this.lblResultado.Text = "El resultado es:";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbOperacion
             // 
-            this.cbOperacion.BackColor = System.Drawing.Color.MintCream; // Verde menta claro
+            this.cbOperacion.BackColor = System.Drawing.Color.MintCream;
             this.cbOperacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbOperacion.FormattingEnabled = true;
@@ -74,7 +75,7 @@
             // 
             // btnIgual
             // 
-            this.btnIgual.BackColor = System.Drawing.Color.LightSeaGreen; // Verde menta suave
+            this.btnIgual.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIgual.Location = new System.Drawing.Point(184, 53);
             this.btnIgual.Name = "btnIgual";
@@ -86,7 +87,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.DarkSlateGray; // Verde menta oscuro
+            this.btnExit.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(142, 133);
             this.btnExit.Name = "btnExit";
@@ -98,7 +99,7 @@
             // 
             // btnCleaner
             // 
-            this.btnCleaner.BackColor = System.Drawing.Color.LightSeaGreen; // Verde menta suave
+            this.btnCleaner.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnCleaner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCleaner.Location = new System.Drawing.Point(12, 133);
             this.btnCleaner.Name = "btnCleaner";
@@ -110,7 +111,7 @@
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.Color.MintCream; // Verde menta claro
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(280, 200);
             this.Controls.Add(this.btnCleaner);
             this.Controls.Add(this.btnExit);
@@ -119,11 +120,13 @@
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtNumero2);
             this.Controls.Add(this.txtNumero1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; // Sin barra de menú
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen; // Centrar en la pantalla
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.TextBox txtNumero1;

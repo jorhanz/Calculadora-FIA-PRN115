@@ -8,3 +8,13 @@ C:\Users\Utip\workstation\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\Calcul
 C:\Users\Utip\workstation\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.csproj.CoreCompileInputs.cache
 C:\Users\Utip\workstation\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.exe
 C:\Users\Utip\workstation\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\bin\Debug\CalculadoraGit.exe.config
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\bin\Debug\CalculadoraGit.exe
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\bin\Debug\CalculadoraGit.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\ComboBoxColorExample.Form1.resources
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.Properties.Resources.resources
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.csproj.GenerateResource.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.exe
+C:\Users\Usuario\OneDrive\Documentos\GitHub\Calculadora-FIA-PRN115\CalculadoraGit\obj\Debug\CalculadoraGit.pdb
