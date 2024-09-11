@@ -1,104 +1,109 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
-namespace CalculadoraGit
+namespace ComboBoxColorExample
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+            InitializeComboBox();
         }
 
-        private void btnSuma_Click(object sender, EventArgs e)
+        private void InitializeComboBox()
         {
-            //Son variables de entrada
-            String LetraNumero1 = txtbNumero1.Text, LetraNumero2 = txtbNumero2.Text;
-            double Numero1, Numero2, Resultado;
-            try
+            cbOperacion.DrawMode = DrawMode.OwnerDrawFixed;
+            cbOperacion.DrawItem += new DrawItemEventHandler(cbOperacion_DrawItem);
+        }
+
+        private void cbOperacion_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0)
+                return;
+
+            ComboBox comboBox = (ComboBox)sender;
+            string itemText = comboBox.Items[e.Index].ToString();
+
+            e.DrawBackground();
+            using (var brush = new SolidBrush(Color.LightBlue))
             {
-                if (double.TryParse(LetraNumero1, out Numero1) && double.TryParse(LetraNumero2, out Numero2))
-                {
-                    if (double.TryParse(LetraNumero2, out Numero2))
-                    {
-                        Numero1 = double.Parse(LetraNumero1);
-                        Numero2 = double.Parse(LetraNumero2);
-                        Resultado = Numero1 + Numero2;
-                        lblResultado.Text = Resultado.ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show
-                  ("Ha ingresado un dato invalido, por favor escriba un valor númerico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                e.Graphics.FillRectangle(brush, e.Bounds);
             }
-            catch (Exception)
+            using (var brush = new SolidBrush(Color.DarkBlue))
             {
-                MessageBox.Show
-                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Graphics.DrawString(itemText, e.Font, brush, e.Bounds);
             }
+
+            e.DrawFocusRectangle();
         }
 
-        private void btnResta_Click(object sender, EventArgs e)
+        private void btnCleaner_Click(object sender, EventArgs e)
         {
-            //Son variables de entrada
-            String LetraNumero1 = txtbNumero1.Text, LetraNumero2 = txtbNumero2.Text;
-            double Numero1, Numero2, Resultado;
-
-            try
-            {                           
-                if (double.TryParse(LetraNumero1, out Numero1) && double.TryParse(LetraNumero2, out Numero2))
-                {
-                    if (double.TryParse(LetraNumero2, out Numero2))
-                    {
-                        Numero1 = double.Parse(LetraNumero1);
-                        Numero2 = double.Parse(LetraNumero2);
-                        Resultado = Numero1 - Numero2;
-                        lblResultado.Text = Resultado.ToString();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show
-                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show
-                   ("Ha ingresado un dato invalido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
-
-        private void btnMultiplicacion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDivision_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtbNumero1.Text = "";
-            txtbNumero2.Text = "";
-            lblResultado.Text = "0.00";
+            txtNumero1.Text = "";
+            txtNumero2.Text = "";
+            lblResultado.Text = "Resultado:";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+        }
+
+        private void btnIgual_Click(object sender, EventArgs e)
+        {
+            double num1, num2;
+            double result = 0;
+
+            var culture = CultureInfo.CurrentCulture;
+            var numberFormat = culture.NumberFormat;
+            string decimalSeparator = numberFormat.CurrencyDecimalSeparator;
+
+            string textNum1 = txtNumero1.Text.Replace(',', decimalSeparator[0]).Replace('.', decimalSeparator[0]);
+            string textNum2 = txtNumero2.Text.Replace(',', decimalSeparator[0]).Replace('.', decimalSeparator[0]);
+
+            if (double.TryParse(textNum1, NumberStyles.Float, culture, out num1) && double.TryParse(textNum2, NumberStyles.Float, culture, out num2))
+            {
+                // Verificar si se ha seleccionado una operación
+                if (cbOperacion.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una operación.");
+                    return;
+                }
+
+                // Realizar la operación según la selección
+                switch (cbOperacion.SelectedItem.ToString())
+                {
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        if (num2 != 0)
+                        {
+                            result = num1 / num2;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se puede dividir por cero.");
+                            return;
+                        }
+                        break;
+                }
+
+                lblResultado.Text = $"Resultado: {result.ToString(culture)}";
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese números válidos.");
+            }
         }
     }
 }
