@@ -1,94 +1,109 @@
 ﻿using System;
+using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
-namespace CalculadoraGit
+namespace ComboBoxColorExample
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+            InitializeComboBox();
         }
 
-        // Método para validar las entradas
-        private bool ValidarEntrada(out double Numero1, out double Numero2)
+        private void InitializeComboBox()
         {
-            // Asignar valores predeterminados a Numero1 y Numero2
-            Numero1 = 0;
-            Numero2 = 0;
+            cbOperacion.DrawMode = DrawMode.OwnerDrawFixed;
+            cbOperacion.DrawItem += new DrawItemEventHandler(cbOperacion_DrawItem);
+        }
 
-            // Reemplazar comas por puntos para la conversión
-            string entradaNumero1 = txtbNumero1.Text.Replace(',', '.');
-            string entradaNumero2 = txtbNumero2.Text.Replace(',', '.');
+        private void cbOperacion_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0)
+                return;
 
-            // Intentar convertir las entradas a números
-            if (double.TryParse(entradaNumero1, NumberStyles.Any, CultureInfo.InvariantCulture, out Numero1) &&
-                double.TryParse(entradaNumero2, NumberStyles.Any, CultureInfo.InvariantCulture, out Numero2))
+            ComboBox comboBox = (ComboBox)sender;
+            string itemText = comboBox.Items[e.Index].ToString();
+
+            e.DrawBackground();
+            using (var brush = new SolidBrush(Color.LightBlue))
             {
-                return true;
+                e.Graphics.FillRectangle(brush, e.Bounds);
+            }
+            using (var brush = new SolidBrush(Color.DarkBlue))
+            {
+                e.Graphics.DrawString(itemText, e.Font, brush, e.Bounds);
             }
 
-            // Mostrar un mensaje de error si la conversión falla
-            MessageBox.Show("Ha ingresado un dato inválido, por favor ingrese valores numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return false;
+            e.DrawFocusRectangle();
         }
 
-        // Método para realizar las operaciones aritméticas
-        private void RealizarOperacion(string operacion)
+        private void btnCleaner_Click(object sender, EventArgs e)
         {
-            if (ValidarEntrada(out double Numero1, out double Numero2))
+            txtNumero1.Text = "";
+            txtNumero2.Text = "";
+            lblResultado.Text = "Resultado:";
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnIgual_Click(object sender, EventArgs e)
+        {
+            double num1, num2;
+            double result = 0;
+
+            var culture = CultureInfo.CurrentCulture;
+            var numberFormat = culture.NumberFormat;
+            string decimalSeparator = numberFormat.CurrencyDecimalSeparator;
+
+            string textNum1 = txtNumero1.Text.Replace(',', decimalSeparator[0]).Replace('.', decimalSeparator[0]);
+            string textNum2 = txtNumero2.Text.Replace(',', decimalSeparator[0]).Replace('.', decimalSeparator[0]);
+
+            if (double.TryParse(textNum1, NumberStyles.Float, culture, out num1) && double.TryParse(textNum2, NumberStyles.Float, culture, out num2))
             {
-                double Resultado = 0;
-                switch (operacion)
+                // Verificar si se ha seleccionado una operación
+                if (cbOperacion.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una operación.");
+                    return;
+                }
+
+                // Realizar la operación según la selección
+                switch (cbOperacion.SelectedItem.ToString())
                 {
                     case "+":
-                        Resultado = Numero1 + Numero2;
+                        result = num1 + num2;
                         break;
                     case "-":
-                        Resultado = Numero1 - Numero2;
+                        result = num1 - num2;
                         break;
                     case "*":
-                        Resultado = Numero1 * Numero2;
+                        result = num1 * num2;
                         break;
                     case "/":
-                        if (Numero2 != 0)
+                        if (num2 != 0)
                         {
-                            Resultado = Numero1 / Numero2;
+                            result = num1 / num2;
                         }
                         else
                         {
-                            MessageBox.Show("Error: División por cero no permitida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("No se puede dividir por cero.");
                             return;
                         }
                         break;
-                    default:
-                        MessageBox.Show("Operación no válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
                 }
-                // Mostrar el resultado con 2 decimales
-                lblResultado.Text = Resultado.ToString("F2");
+
+                lblResultado.Text = $"Resultado: {result.ToString(culture)}";
             }
-        }
-
-        // Eventos para los botones de las operaciones
-        private void btnSuma_Click(object sender, EventArgs e) => RealizarOperacion("+");
-        private void btnResta_Click(object sender, EventArgs e) => RealizarOperacion("-");
-        private void btnMultiplicacion_Click(object sender, EventArgs e) => RealizarOperacion("*");
-        private void btnDivision_Click(object sender, EventArgs e) => RealizarOperacion("/");
-
-        // Botón para limpiar las entradas y el resultado
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtbNumero1.Text = "";
-            txtbNumero2.Text = "";
-            lblResultado.Text = "0.00"; // Reinicia el resultado a cero
-        }
-
-        // Método para el botón de salir (cerrar la aplicación)
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close(); // Cierra la aplicación
+            else
+            {
+                MessageBox.Show("Por favor, ingrese números válidos.");
+            }
         }
     }
 }
