@@ -68,6 +68,13 @@ namespace ComboBoxColorExample
 
             if (double.TryParse(textNum1, NumberStyles.Float, culture, out num1) && double.TryParse(textNum2, NumberStyles.Float, culture, out num2))
             {
+                // Verificar si se ha seleccionado una operación en el ComboBox
+                if (cbOperacion.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una operación.");
+                    return;
+                }
+
                 switch (cbOperacion.SelectedItem.ToString())
                 {
                     case "+":
@@ -90,6 +97,9 @@ namespace ComboBoxColorExample
                             return;
                         }
                         break;
+                    default:
+                        MessageBox.Show("Operación no válida.");
+                        return;
                 }
 
                 lblResultado.Text = $"El resultado es: {result.ToString(culture)}"; // Texto de la etiqueta con resultado
@@ -99,5 +109,6 @@ namespace ComboBoxColorExample
                 MessageBox.Show("Por favor, ingrese números válidos.");
             }
         }
+
     }
 }
