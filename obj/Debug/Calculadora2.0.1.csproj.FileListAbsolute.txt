@@ -1,0 +1,10 @@
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.exe.config
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.exe
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\bin\Debug\Calculadora2.0.1.pdb
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.AssemblyReference.cache
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\obj\Debug\ComboBoxColorExample.Form1.resources
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\obj\Debug\Calculadora2._0._1.Properties.Resources.resources
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.GenerateResource.cache
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.csproj.CoreCompileInputs.cache
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.exe
+C:\Users\feder\Documents\Calculadora-FIA-PRN115\obj\Debug\Calculadora2.0.1.pdb
